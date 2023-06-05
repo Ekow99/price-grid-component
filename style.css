@@ -1,0 +1,142 @@
+:root{
+    --clr-primary-hsl-100: 179, 62%, 43%;
+    --clr-primary-100: hsl(var(--clr-primary-hsl-100));
+    --clr-primary-200: hsl(71, 73%, 54%);
+    --clr-neutral-hsl-100: 204, 43%, 93%;
+    --clr-neutral-100: hsl(var(--clr-neutral-hsl-100));
+    --clr-neutral-hsl-200: 218, 22%, 67%;
+    --clr-neutral-200: hsl(var(--clr-neutral-hsl-200));
+    --fw-light: 400;
+    --fw-bold: 700;
+    --font-family: 'Karla', sans-serif;
+    --padding: 2.5rem;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    font-family: var(--font-family);
+}
+
+body{
+    background-color: var(--clr-neutral-100);
+}
+
+.price-grid-card{
+    --font-size: 1.2rem;
+    display: grid;
+    max-width: 42rem;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: .5rem 1rem 3rem hsl(var(--clr-neutral-hsl-200), 0.5 );
+    margin-block: 4rem;
+    margin-inline: 2rem;
+}
+
+.price-community {
+    display: grid;
+    gap: 1.5rem;
+    background-color: #f9f9f9;
+    padding: var(--padding);
+}
+
+.price-community-header{
+    color: var(--clr-primary-100);
+    font-weight: var(--fw-bold);
+}
+
+.community-sub-header{
+    font-size: var(--font-size);
+    color: var(--clr-primary-200);
+    font-weight: var(--fw-bold);
+}
+
+.price-community-paragraph {
+    color: var(--clr-neutral-200);
+    line-height: 1.8rem;
+}
+
+.price-subscription {
+    display: grid;
+    gap: 1rem;
+    background-color: var(--clr-primary-100);
+    padding: var(--padding);
+    color: #f9f9f9;
+}
+
+.subscription-header {
+    font-size: var(--font-size);
+    font-weight: var(--fw-bold);
+}
+
+.price-why-us {
+    display: grid;
+    gap: 1rem;
+    background-color: hsl(var(--clr-primary-hsl-100), 0.8);
+    padding: var(--padding);
+    color: #f9f9f9;
+}
+
+.subscription-price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.subscription-amount {
+    font-size: 2rem;
+    font-weight: var(--fw-bold);
+}
+
+.subscription-button {
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    background-color: var(--clr-primary-200);
+    color: #f9f9f9;
+    cursor: pointer;
+    box-shadow: 0px 11px 20px 4px hsl(178, 62%, 34%);
+}
+
+
+.why-us-header {
+    font-size: var(--font-size);
+    font-weight: var(--fw-bold);
+}
+
+.why-us-paragraph {
+    color: var(--clr-neutral-100);
+    padding-right: 3.5rem;
+    line-height: 1.4rem;
+}
+
+.subscription-duration {
+    color:  var(--clr-neutral-100);
+}
+
+
+@media (min-width: 600px) {
+    body{
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+
+    .price-grid-card{
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .price-tag{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+
